@@ -1,0 +1,37 @@
+@import "helpers/variables";
+@import "helpers/placeholders";
+@import "helpers/mixins";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+@import "components/forms";
+@import "components/buttons";
+
+/* Fonts */
+
+@font-face {
+    font-family: Luxia;
+    src: url(../fonts/Luxia/Luxia-Semi-BoldDisplay.otf) format('opentype');
+}
+
+@font-face {
+    font-family: Hal;
+    src: url(../fonts/Hal/Hal.ttf) format('truetype');
+}
+
+/* Universal Styles */
+
+* , *::before, *::after {
+    @extend %normalize;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $main-font-size;
+}
+
+body {
+    color: $main-color;
+    font-family: $main-font;
+    font-size: 1.5rem;
+}
